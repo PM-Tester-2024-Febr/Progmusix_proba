@@ -6,7 +6,7 @@ def get_preconfigured_chrome_driver() -> webdriver.Chrome:
     options.add_experimental_option('detach', True)
     options.add_argument('--headless')
     #options.add_argument("--start-maximized")
-    #options.add_argument("--disable-search-engine-choice-screen")
+    options.add_argument("--disable-search-engine-choice-screen")
     # options.add_argument('window-position=2000,50')
     # options.add_argument("--lang=hu")
     options.add_argument("--lang=en")
