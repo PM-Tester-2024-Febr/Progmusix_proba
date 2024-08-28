@@ -155,7 +155,7 @@ class ProgMusix(GeneralPage):
         return self.browser.find_element(By.ID,'mat-input-1')
     def contact_field(self):
         return self.browser.find_element(By.ID,'mat-input-2')
-    def contact_send_btm(self):
+    def contact_send_btn(self):
         return self.browser.find_element(By.XPATH,'//button[@type="submit"]')
     def contact_msg_succ(self):
         return WebDriverWait(self.browser, 5).until(EC.visibility_of_element_located((By.XPATH,'//div[@class="mat-dialog-content"]'))).text
@@ -166,7 +166,7 @@ class ProgMusix(GeneralPage):
     def address(self):
         return WebDriverWait(self.browser, 5).until(EC.visibility_of_element_located((By.XPATH,'//div[@class="leaflet-popup-content"]'))).text
 
-    def contact_send_btn(self):
+    def contact_sent_btn(self):
         return WebDriverWait(self.browser,5).until(EC.visibility_of_element_located((By.XPATH,'//button[@color="accent"]')))
 
     #Megerősítő email:
@@ -263,6 +263,15 @@ class ProgMusix(GeneralPage):
         self.username_login().send_keys(TESTDATA['Login_username_p'])
         self.password_login().send_keys(TESTDATA['Login_password_p'])
         self.login_btn().click()
+
+    def contact_method(self):
+        self.contact_btn().click()
+        self.map_icon().click()
+        self.contact_name().send_keys(TESTDATA['contact_name'])
+        self.contact_email().send_keys(TESTDATA['contact_email'])
+        self.contact_field().send_keys(TESTDATA['contact_field'])
+        self.contact_send_btn().click()
+        self.contact_sent_btn().click()
 
 
 

@@ -33,14 +33,10 @@ class TestProgmusix:
         assert self.page.dif_password_againg_msg() == TESTDATA['negative_password_again_msg']
 
     def test_contact(self):
-        self.page.contact_btn().click()
-        self.page.map_icon().click()
+        self.page.contact_method()
         #Megjelenik-e a cím, ha rákattint a helyzetjelző ikonra:
         assert TESTDATA['address'] in self.page.address()
-        self.page.contact_name().send_keys(TESTDATA['contact_name'])
-        self.page.contact_email().send_keys(TESTDATA['contact_email'])
-        self.page.contact_field().send_keys(TESTDATA['contact_field'])
-        self.page.contact_send_btm().click()
+        assert self.page.contact_msg_succ() == TESTDATA['contact_msg_succ']
         #Egyezik, megjelenik az adatbázisban a beírt név, email cím, üzenet szövege:
         #assert TESTDATA['contact_name'] and TESTDATA['contact_email'] and TESTDATA['contact_field'] in self.page.last_msg()
 
