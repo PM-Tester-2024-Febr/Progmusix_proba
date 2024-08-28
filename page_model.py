@@ -167,7 +167,7 @@ class ProgMusix(GeneralPage):
         return WebDriverWait(self.browser, 5).until(EC.visibility_of_element_located((By.XPATH,'//div[@class="leaflet-popup-content"]'))).text
 
     def contact_sent_btn(self):
-        return WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located((By.XPATH, '//button[@color="accent"]')))
+        return WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located((By.XPATH, '//button[@class="mat-focus-indicator mat-raised-button mat-button-base mat-accent"]')))
 
     #Megerősítő email:
 
