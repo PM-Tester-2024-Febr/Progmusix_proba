@@ -34,10 +34,8 @@ class TestProgmusix:
 
     def test_contact(self):
         self.page.contact_method()
-        #Megjelenik-e a cím, ha rákattint a helyzetjelző ikonra:
         assert TESTDATA['address'] in self.page.address()
         assert self.page.contact_msg_succ() == TESTDATA['contact_msg_succ']
-        #Egyezik, megjelenik az adatbázisban a beírt név, email cím, üzenet szövege:
-        #assert TESTDATA['contact_name'] and TESTDATA['contact_email'] and TESTDATA['contact_field'] in self.page.last_msg()
+        assert TESTDATA['contact_name'] and TESTDATA['contact_email'] and TESTDATA['contact_field'] in self.page.last_msg()
 
 
