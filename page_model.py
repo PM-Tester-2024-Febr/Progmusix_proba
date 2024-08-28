@@ -272,7 +272,6 @@ class ProgMusix(GeneralPage):
         self.contact_field().send_keys(TESTDATA['contact_field'])
         self.contact_send_btn().click()
         self.contact_sent_btn().click()
-#asd
 
 
 
