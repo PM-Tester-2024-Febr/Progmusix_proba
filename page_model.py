@@ -212,6 +212,7 @@ class ProgMusix(GeneralPage):
         self.contact_email().send_keys(TESTDATA['contact_email'])
         self.contact_field().send_keys(TESTDATA['contact_field'])
         self.contact_send_btn().click()
+        time.sleep(2)
         self.contact_sent_btn().click()
 
 
