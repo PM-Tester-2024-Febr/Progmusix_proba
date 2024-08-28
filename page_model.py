@@ -205,6 +205,15 @@ class ProgMusix(GeneralPage):
         cursor.execute("SELECT email, username FROM custom_user ORDER BY id DESC LIMIT 1")
         return cursor.fetchone()
 
+    def contact_method(self):
+        self.contact_btn().click()
+        self.map_icon().click()
+        self.contact_name().send_keys(TESTDATA['contact_name'])
+        self.contact_email().send_keys(TESTDATA['contact_email'])
+        self.contact_field().send_keys(TESTDATA['contact_field'])
+        self.contact_send_btn().click()
+        self.contact_sent_btn().click()
+
     def registration_method(self):
         self.menu_login_btn().click()
         self.create_btn().click()
@@ -264,14 +273,6 @@ class ProgMusix(GeneralPage):
         self.password_login().send_keys(TESTDATA['Login_password_p'])
         self.login_btn().click()
 
-    def contact_method(self):
-        self.contact_btn().click()
-        self.map_icon().click()
-        self.contact_name().send_keys(TESTDATA['contact_name'])
-        self.contact_email().send_keys(TESTDATA['contact_email'])
-        self.contact_field().send_keys(TESTDATA['contact_field'])
-        self.contact_send_btn().click()
-        self.contact_sent_btn().click()
 
 
 
