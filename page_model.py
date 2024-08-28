@@ -211,8 +211,8 @@ class ProgMusix(GeneralPage):
         self.contact_name().send_keys(TESTDATA['contact_name'])
         self.contact_email().send_keys(TESTDATA['contact_email'])
         self.contact_field().send_keys(TESTDATA['contact_field'])
-        self.contact_send_btn().click()
         self.contact_sent_btn().click()
+        self.contact_send_btn().click()
 
     def registration_method(self):
         self.menu_login_btn().click()
