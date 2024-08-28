@@ -41,5 +41,7 @@ class TestProgmusix:
         self.page.contact_email().send_keys(TESTDATA['contact_email'])
         self.page.contact_field().send_keys(TESTDATA['contact_field'])
         self.page.contact_send_btn().click()
+        # Egyezik, megjelenik az adatbázisban a beírt név, email cím, üzenet szövege:
+        assert TESTDATA['contact_name'] and TESTDATA['contact_email'] and TESTDATA['contact_field'] in self.page.last_msg()
 
 
