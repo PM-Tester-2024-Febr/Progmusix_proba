@@ -50,9 +50,9 @@ jobs:
 
     - name: Test with pytest
       env:
-        FRONTEND_URL: http://localhost:4200
-        BACKEND_URL: http://localhost:8080
-        host: localhost
+        FRONTEND_URL: http://127.0.0.1:4200
+        BACKEND_URL: http://127.0.0.1:8080
+        host: 127.0.0.1
         port: 3306
         user: root
         password: test1234
